@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5cea6dae94d53b1914fdddaf6026ad5b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5cea6dae94d53b1914fdddaf6026ad5b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5cea6dae94d53b1914fdddaf6026ad5b = L.map(
+                "map_5cea6dae94d53b1914fdddaf6026ad5b",
+                {
+                    center: [-15.310527768649527, -49.615869418078375],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e6ede0155d3af1d23ad1bff4f2ab3376 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e6ede0155d3af1d23ad1bff4f2ab3376.addTo(map_5cea6dae94d53b1914fdddaf6026ad5b);
+        
+    
+            var marker_303b1107af85bab15d6ed6b6825c25c5 = L.marker(
+                [-15.310527768649527, -49.615869418078375],
+                {
+}
+            ).addTo(map_5cea6dae94d53b1914fdddaf6026ad5b);
+        
+    
+            var icon_8d2a6a4ab8718882957475be87bfc12f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a3fb18e8a33e38a0b2651bf48de484c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_738fb667c9b4f1eb8911409729a94edd = $(`<div id="html_738fb667c9b4f1eb8911409729a94edd" style="width: 100.0%; height: 100.0%;">Universidade</div>`)[0];
+                popup_a3fb18e8a33e38a0b2651bf48de484c0.setContent(html_738fb667c9b4f1eb8911409729a94edd);
+            
+        
+
+        marker_303b1107af85bab15d6ed6b6825c25c5.bindPopup(popup_a3fb18e8a33e38a0b2651bf48de484c0)
+        ;
+
+        
+    
+    
+                marker_303b1107af85bab15d6ed6b6825c25c5.setIcon(icon_8d2a6a4ab8718882957475be87bfc12f);
+            
+    
+            var marker_9ed26d747182d60ca501c2eed1632d4b = L.marker(
+                [-15.309443574756077, -49.61718842326959],
+                {
+}
+            ).addTo(map_5cea6dae94d53b1914fdddaf6026ad5b);
+        
+    
+            var icon_1aac45c8857e21eb3c98a5069dca3f5f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_272934311cb8e40f92edece3c8e6ddbe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5add184d8e26b50e01ce4c10f1199d6 = $(`<div id="html_e5add184d8e26b50e01ce4c10f1199d6" style="width: 100.0%; height: 100.0%;">Bombeiros</div>`)[0];
+                popup_272934311cb8e40f92edece3c8e6ddbe.setContent(html_e5add184d8e26b50e01ce4c10f1199d6);
+            
+        
+
+        marker_9ed26d747182d60ca501c2eed1632d4b.bindPopup(popup_272934311cb8e40f92edece3c8e6ddbe)
+        ;
+
+        
+    
+    
+                marker_9ed26d747182d60ca501c2eed1632d4b.setIcon(icon_1aac45c8857e21eb3c98a5069dca3f5f);
+            
+    
+            var marker_3333fde3d9842a9c1fa00f18f62fdcca = L.marker(
+                [-15.310115278311116, -49.619819693191786],
+                {
+}
+            ).addTo(map_5cea6dae94d53b1914fdddaf6026ad5b);
+        
+    
+            var icon_7e76132e5b46632feebeec67c574a0b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e73e4dacbcafe492b55786e62f14650 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f177b1490111f8dd9a7e45823392948f = $(`<div id="html_f177b1490111f8dd9a7e45823392948f" style="width: 100.0%; height: 100.0%;">Policia</div>`)[0];
+                popup_1e73e4dacbcafe492b55786e62f14650.setContent(html_f177b1490111f8dd9a7e45823392948f);
+            
+        
+
+        marker_3333fde3d9842a9c1fa00f18f62fdcca.bindPopup(popup_1e73e4dacbcafe492b55786e62f14650)
+        ;
+
+        
+    
+    
+                marker_3333fde3d9842a9c1fa00f18f62fdcca.setIcon(icon_7e76132e5b46632feebeec67c574a0b3);
+            
+    
+            var marker_aa79a9a71e0859bd0bba2beb4045dc69 = L.marker(
+                [-15.310388854207115, -49.596106926321326],
+                {
+}
+            ).addTo(map_5cea6dae94d53b1914fdddaf6026ad5b);
+        
+    
+            var icon_8a1e5dd206511e4169e4ec80652ed9d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f0a2f35e5cda62df3f26be974bf8b03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3910ad550449895b1c68b664cebbcb8c = $(`<div id="html_3910ad550449895b1c68b664cebbcb8c" style="width: 100.0%; height: 100.0%;">Orb</div>`)[0];
+                popup_3f0a2f35e5cda62df3f26be974bf8b03.setContent(html_3910ad550449895b1c68b664cebbcb8c);
+            
+        
+
+        marker_aa79a9a71e0859bd0bba2beb4045dc69.bindPopup(popup_3f0a2f35e5cda62df3f26be974bf8b03)
+        ;
+
+        
+    
+    
+                marker_aa79a9a71e0859bd0bba2beb4045dc69.setIcon(icon_8a1e5dd206511e4169e4ec80652ed9d8);
+            
+    
+            var poly_line_d568059f6a623211473c3803f4fea510 = L.polyline(
+                [[-15.3106225, -49.6153697], [-15.310283, -49.6166509], [-15.3100671, -49.6167736], [-15.3095961, -49.6170523]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_5cea6dae94d53b1914fdddaf6026ad5b);
+        
+    
+        var popup_55e86107a22b563fa57c96a64b8f7f7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_439742f380491cacf41ad9588386d102 = $(`<div id="html_439742f380491cacf41ad9588386d102" style="width: 100.0%; height: 100.0%;">Universidade → Bombeiros (0.23 km)</div>`)[0];
+                popup_55e86107a22b563fa57c96a64b8f7f7e.setContent(html_439742f380491cacf41ad9588386d102);
+            
+        
+
+        poly_line_d568059f6a623211473c3803f4fea510.bindPopup(popup_55e86107a22b563fa57c96a64b8f7f7e)
+        ;
+
+        
+    
+    
+            var poly_line_e7318b03cd504e42c28dc746df20923c = L.polyline(
+                [[-15.3106225, -49.6153697], [-15.310283, -49.6166509], [-15.3101502, -49.6171874], [-15.3099135, -49.6181649], [-15.3097379, -49.6187201], [-15.3095378, -49.61925], [-15.3093417, -49.619801], [-15.309556, -49.6198804], [-15.3096491, -49.6196121], [-15.3101626, -49.619789]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_5cea6dae94d53b1914fdddaf6026ad5b);
+        
+    
+        var popup_0d39ad2bac2b2ad62611561dae0609bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbee321d05b4c2aebbc31e4540efbf00 = $(`<div id="html_dbee321d05b4c2aebbc31e4540efbf00" style="width: 100.0%; height: 100.0%;">Universidade → Policia (0.61 km)</div>`)[0];
+                popup_0d39ad2bac2b2ad62611561dae0609bd.setContent(html_dbee321d05b4c2aebbc31e4540efbf00);
+            
+        
+
+        poly_line_e7318b03cd504e42c28dc746df20923c.bindPopup(popup_0d39ad2bac2b2ad62611561dae0609bd)
+        ;
+
+        
+    
+    
+            var poly_line_1752e905e77160211a7629dbad423dea = L.polyline(
+                [[-15.3095961, -49.6170523], [-15.3100671, -49.6167736], [-15.310283, -49.6166509], [-15.3105063, -49.6165063], [-15.3108007, -49.6154413], [-15.3108766, -49.6151574], [-15.3109315, -49.6143065], [-15.3109666, -49.6142872], [-15.3110087, -49.6141066], [-15.3109882, -49.6140752], [-15.3112647, -49.6127748], [-15.3116739, -49.6108383], [-15.3117437, -49.6105081], [-15.3111441, -49.6089189], [-15.3110959, -49.6088268], [-15.3106156, -49.6078591], [-15.3101501, -49.6068602], [-15.3098603, -49.6056506], [-15.3098645, -49.6048671], [-15.3098632, -49.6036483], [-15.3098623, -49.6028474], [-15.3098602, -49.6016565], [-15.309859, -49.6009833], [-15.3098569, -49.5998106], [-15.309875, -49.5993661], [-15.309875, -49.5982847], [-15.3098789, -49.597996], [-15.3098877, -49.5966296], [-15.3105957, -49.5957807]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_5cea6dae94d53b1914fdddaf6026ad5b);
+        
+    
+        var popup_602340ba883d58592aa7524b3e17e4ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f0b82cbac137fdd3419fdaf5ac6b9ce = $(`<div id="html_5f0b82cbac137fdd3419fdaf5ac6b9ce" style="width: 100.0%; height: 100.0%;">Bombeiros → Orb (2.44 km)</div>`)[0];
+                popup_602340ba883d58592aa7524b3e17e4ab.setContent(html_5f0b82cbac137fdd3419fdaf5ac6b9ce);
+            
+        
+
+        poly_line_1752e905e77160211a7629dbad423dea.bindPopup(popup_602340ba883d58592aa7524b3e17e4ab)
+        ;
+
+        
+    
+    
+            var poly_line_e58fd046e121f9008b887cb766e01f27 = L.polyline(
+                [[-15.3095961, -49.6170523], [-15.3100671, -49.6167736], [-15.310283, -49.6166509], [-15.3101502, -49.6171874], [-15.3099135, -49.6181649], [-15.3097379, -49.6187201], [-15.3095378, -49.61925], [-15.3093417, -49.619801], [-15.309556, -49.6198804], [-15.3096491, -49.6196121], [-15.3101626, -49.619789]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_5cea6dae94d53b1914fdddaf6026ad5b);
+        
+    
+        var popup_ca63ebd8099fca7851a8ffd3ef082f5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65c518c2bbbc1a43fb8164de0eadb027 = $(`<div id="html_65c518c2bbbc1a43fb8164de0eadb027" style="width: 100.0%; height: 100.0%;">Bombeiros → Policia (0.56 km)</div>`)[0];
+                popup_ca63ebd8099fca7851a8ffd3ef082f5c.setContent(html_65c518c2bbbc1a43fb8164de0eadb027);
+            
+        
+
+        poly_line_e58fd046e121f9008b887cb766e01f27.bindPopup(popup_ca63ebd8099fca7851a8ffd3ef082f5c)
+        ;
+
+        
+    
+    
+            var poly_line_66ad99de66c6352053096db888bcf332 = L.polyline(
+                [[-15.3101626, -49.619789], [-15.3096491, -49.6196121], [-15.3097428, -49.6193422], [-15.3099379, -49.61878], [-15.3100828, -49.6182704], [-15.3102921, -49.6173817], [-15.3105063, -49.6165063], [-15.3108007, -49.6154413], [-15.3108766, -49.6151574], [-15.3109315, -49.6143065], [-15.3109666, -49.6142872], [-15.3110087, -49.6141066], [-15.3109882, -49.6140752], [-15.3112647, -49.6127748], [-15.3116739, -49.6108383], [-15.3117437, -49.6105081], [-15.3111441, -49.6089189], [-15.3110959, -49.6088268], [-15.3106156, -49.6078591], [-15.3101501, -49.6068602], [-15.3098603, -49.6056506], [-15.3098645, -49.6048671], [-15.3098632, -49.6036483], [-15.3098623, -49.6028474], [-15.3098602, -49.6016565], [-15.309859, -49.6009833], [-15.3098569, -49.5998106], [-15.309875, -49.5993661], [-15.309875, -49.5982847], [-15.3098789, -49.597996], [-15.3098877, -49.5966296], [-15.3105957, -49.5957807]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_5cea6dae94d53b1914fdddaf6026ad5b);
+        
+    
+        var popup_dc4cc690e4a46cbb37645ca93ba7fc80 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3affaf76a047f2506c4c6e194984c35 = $(`<div id="html_f3affaf76a047f2506c4c6e194984c35" style="width: 100.0%; height: 100.0%;">Policia → Orb (2.73 km)</div>`)[0];
+                popup_dc4cc690e4a46cbb37645ca93ba7fc80.setContent(html_f3affaf76a047f2506c4c6e194984c35);
+            
+        
+
+        poly_line_66ad99de66c6352053096db888bcf332.bindPopup(popup_dc4cc690e4a46cbb37645ca93ba7fc80)
+        ;
+
+        
+    
+</script>
+</html>
