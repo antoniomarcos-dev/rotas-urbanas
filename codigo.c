@@ -1,65 +1,87 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-// BUSCA SEQUENCIAL
-int buscaSequencial(int v[], int n, int chave, int *iteracoes) {
-    *iteracoes = 0;
-    for(int i = 0; i < n; i++) {
-        (*iteracoes)++;
-        if(v[i] == chave) {
-            return i;
-        }
-    }
-    return -1;
+typedef struct No {
+    int valor;
+    struct No *esq, *dir;
+} No;
+
+No *criarNo(int valor) {
+    No *novo = (No *)malloc(sizeof(No));
+    novo->valor = valor;
+    novo->esq = novo->dir = NULL;
+    return novo;
 }
 
-// BUSCA BINÁRIA
-int buscaBinaria(int v[], int n, int chave, int *iteracoes) {
-    int inicio = 0, fim = n - 1;
-    *iteracoes = 0;
+No *inserir(No *raiz, int valor) {
+    if (raiz == NULL) return criarNo(valor);
+    if (valor < raiz->valor)
+        raiz->esq = inserir(raiz->esq, valor);
+    else if (valor > raiz->valor)
+        raiz->dir = inserir(raiz->dir, valor);
+    return raiz;
+}
 
-    while(inicio <= fim) {
-        (*iteracoes)++;
-        int meio = (inicio + fim) / 2;
+No *buscar(No *raiz, int valor) {
+    if (raiz == NULL || raiz->valor == valor) return raiz;
+    if (valor < raiz->valor) return buscar(raiz->esq, valor);
+    return buscar(raiz->dir, valor);
+}
 
-        if(v[meio] == chave) {
-            return meio;
-        } else if(v[meio] < chave) {
-            inicio = meio + 1;
-        } else {
-            fim = meio - 1;
-        }
+No *minimo(No *raiz) {
+    while (raiz->esq != NULL) raiz = raiz->esq;
+    return raiz;
+}
+
+No *remover(No *raiz, int valor) {
+    if (raiz == NULL) return NULL;
+    if (valor < raiz->valor)
+        raiz->esq = remover(raiz->esq, valor);
+    else if (valor > raiz->valor)
+        raiz->dir = remover(raiz->dir, valor);
+    else {
+        // Folha ou um filho
+        if (raiz->esq == NULL) { No *t = raiz->dir; free(raiz); return t; }
+        if (raiz->dir == NULL) { No *t = raiz->esq; free(raiz); return t; }
+        // Dois filhos
+        No *suc = minimo(raiz->dir);
+        raiz->valor = suc->valor;
+        raiz->dir = remover(raiz->dir, suc->valor);
     }
-    return -1;
+    return raiz;
+}
+
+void emOrdem(No *raiz) {
+    if (raiz == NULL) return;
+    emOrdem(raiz->esq);
+    printf("%d ", raiz->valor);
+    emOrdem(raiz->dir);
 }
 
 int main() {
-    // Vetor ordenado (necessário para busca binária)
-    int vetor[20] = {2, 5, 8, 12, 15, 18, 21, 24, 27, 30,
-                     33, 36, 39, 42, 45, 48, 51, 54, 57, 60};
+    No *raiz = NULL;
+    int vals[] = {50, 30, 70, 20, 40, 60, 80, 10, 65, 90};
 
-    int n = 20;
-    int chaveExistente = 24;
-    int chaveInexistente = 100;
+    // Inserção de 10 valores
+    for (int i = 0; i < 10; i++)
+        raiz = inserir(raiz, vals[i]);
+    printf("Arvore: "); emOrdem(raiz); printf("\n");
 
-    int iterSeq, iterBin;
+    // Busca existente e inexistente
+    printf("Busca 40: %s\n", buscar(raiz, 40) ? "encontrado" : "nao encontrado");
+    printf("Busca 99: %s\n", buscar(raiz, 99) ? "encontrado" : "nao encontrado");
 
-    // TESTE COM VALOR EXISTENTE
-    printf("=== BUSCA VALOR EXISTENTE (%d) ===\n", chaveExistente);
+    // Remoção: nó folha
+    raiz = remover(raiz, 40);
+    printf("Remove 40 (folha):      "); emOrdem(raiz); printf("\n");
 
-    int posSeq = buscaSequencial(vetor, n, chaveExistente, &iterSeq);
-    int posBin = buscaBinaria(vetor, n, chaveExistente, &iterBin);
+    // Remoção: nó com um filho
+    raiz = remover(raiz, 20);
+    printf("Remove 20 (um filho):   "); emOrdem(raiz); printf("\n");
 
-    printf("Sequencial -> Posicao: %d | Iteracoes: %d\n", posSeq, iterSeq);
-    printf("Binaria    -> Posicao: %d | Iteracoes: %d\n\n", posBin, iterBin);
-
-    // TESTE COM VALOR INEXISTENTE
-    printf("=== BUSCA VALOR INEXISTENTE (%d) ===\n", chaveInexistente);
-
-    posSeq = buscaSequencial(vetor, n, chaveInexistente, &iterSeq);
-    posBin = buscaBinaria(vetor, n, chaveInexistente, &iterBin);
-
-    printf("Sequencial -> Posicao: %d | Iteracoes: %d\n", posSeq, iterSeq);
-    printf("Binaria    -> Posicao: %d | Iteracoes: %d\n", posBin, iterBin);
+    // Remoção: nó com dois filhos
+    raiz = remover(raiz, 70);
+    printf("Remove 70 (dois filhos): "); emOrdem(raiz); printf("\n");
 
     return 0;
 }
